@@ -4,9 +4,8 @@
 // @version      1.4
 // @description  Oznacza graczy bez dodatku flagą Ukrainy
 // @author       Kuchar
-// @match        https://*.margonem.pl/*
-// @updateURL    https://raw.githubusercontent.com/Oskirrix/Kopalnia83/main/kopalnia.user.js
-// @downloadURL  https://raw.githubusercontent.com/Oskirrix/Kopalnia83/main/kopalnia.user.js
+// @match        https://*.margonem.pl/
+// @exclude      https://margonem.pl
 // @grant        none
 // ==/UserScript==
 
