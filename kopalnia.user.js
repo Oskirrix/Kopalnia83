@@ -5,8 +5,8 @@
 // @description  Oznacza graczy bez dodatku flagą Ukrainy
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
-// @updateURL    https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia
-// @downloadURL  https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia
+// @updateURL    
+// @downloadURL  
 // @grant        none
 // ==/UserScript==
 
