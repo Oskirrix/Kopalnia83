@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Kopalnia 83
+// @name         Kopalnia
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Oznacza graczy bez dodatku flagą Ukrainy
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
