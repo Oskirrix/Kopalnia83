@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Kopalnia
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Oznacza graczy bez dodatku flagą Ukrainy
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
-// @updateURL    
-// @downloadURL  
+// @updateURL    https://raw.githubusercontent.com/Oskirrix/Kopalnia83/main/kopalnia.user.js
+// @downloadURL  https://raw.githubusercontent.com/Oskirrix/Kopalnia83/main/kopalnia.user.js
 // @grant        none
 // ==/UserScript==
 
