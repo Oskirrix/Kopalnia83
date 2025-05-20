@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Margonem Kopalnia
 // @namespace    http://tampermonkey.net/
-// @version      3.4
+// @version      3.5
 // @description  Flaga UA dla graczy bez dodatku
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
+// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalnia83.user.js
+// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalnia83.user.js
 // @grant        none
 // ==/UserScript==
 
