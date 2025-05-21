@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Margonem Kopalnia SI
 // @namespace    http://tampermonkey.net/
-// @version      3.5
+// @version      3.6
 // @description  Flaga UA dla graczy bez dodatku + wysyłanie lootów na Discord
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
-// @updateURL    
-// @downloadURL  
+// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalnia83.user.js
+// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalnia83.user.js
 // @grant        none
 // ==/UserScript==
 
