@@ -6,8 +6,8 @@
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
-// @updateURL    https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia83NI
-// @downloadURL  https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia83NI
+// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaNI.user.js
+// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaNI.user.js
 // @grant        none
 // ==/UserScript==
 
