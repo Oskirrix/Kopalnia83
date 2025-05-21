@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Margonem Kopalnia SI
+// @name         Margonem Kopalnia (panel Gargonem - flaga UA + loot Discord, poprawne porównanie nicków)
 // @namespace    http://tampermonkey.net/
-// @version      3.6
-// @description  Flaga UA w panelu Gargonem + wysyłanie lootów na Discord, bez zapętlenia
+// @version      3.8
+// @description  Flaga UA w panelu Gargonem + wysyłanie lootów na Discord, poprawne porównanie nicków (bez lvla w nawiasie)
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
@@ -51,7 +51,13 @@
         }
     }
 
-    // --- FLAGA UA W PANELU GARGONEM ---
+    // --- FUNKCJA NORMALIZUJĄCA NICK ---
+    function normalizeNick(nick) {
+        // Usuwa lvl w nawiasie (np. "Sigma Kamilek (83w)") lub na końcu (np. "Sigma Kamilek 83w")
+        return nick.replace(/\s*\(.*?\)$/, '').replace(/\s+\d+\w?$/, '').trim().toLowerCase();
+    }
+
+    // --- FLAGA UA W PANELU GARGONEM (porównanie po oczyszczeniu nicku) ---
     function drawFlagsInGargonemPanel() {
         const list = document.querySelector('.gargonem-otherlist-list');
         if (!list) return;
@@ -61,10 +67,7 @@
             const nick = nickDiv.textContent.trim();
             let hasAddon = false;
             for (const activeNick of lastActiveNicks) {
-                if (
-                    activeNick.toLowerCase().trim() === nick.toLowerCase().trim() ||
-                    activeNick.toLowerCase().startsWith(nick.toLowerCase().split(' ')[0])
-                ) {
+                if (normalizeNick(activeNick) === normalizeNick(nick)) {
                     hasAddon = true;
                     break;
                 }
