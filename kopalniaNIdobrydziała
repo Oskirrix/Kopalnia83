@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Margonem Kopalnia NI
 // @namespace    http://tampermonkey.net/
-// @version      5.9
-// @description  Flaga UA w panelu "Kto jest tutaj" + logger heroików, legend i unikatów na Discord (Nowy Interfejs, obsługa wszystkich miejsc lootu)
+// @version      6.0
+// @description  Flaga UA w panelu "Kto jest tutaj" + logger heroików, legend i unikatów na Discord (Nowy Interfejs, poprawne porównanie nicków)
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
@@ -21,6 +21,12 @@
     const FLAG_UPDATE_INTERVAL = 500;
 
     let lastActiveNicks = [];
+
+    // --- NICK NORMALIZATOR ---
+    function normalizeNick(nick) {
+        // Usuwa lvl w nawiasie (np. "Sigma Kamilek (83w)") lub na końcu (np. "Sigma Kamilek 83w")
+        return nick.replace(/\s*\(.*?\)$/, '').replace(/\s+\d+\w?$/, '').trim().toLowerCase();
+    }
 
     // --- REJESTRACJA NA BACKENDZIE ---
     function getPlayerName() {
@@ -48,16 +54,17 @@
         }
     }
 
-    // --- FLAGI UA W PANELU "KTO JEST TUTAJ" ---
+    // --- FLAGI UA W PANELU "KTO JEST TUTAJ" + GARGONEM ---
     function drawFlagsInWhoIsHere() {
+        // Usuwanie starych flag
         document.querySelectorAll('.addon-flag-ua').forEach(e => e.remove());
 
+        // Panel "Kto jest tutaj"
         document.querySelectorAll('.one-other.tw-list-item .name .inner').forEach(el => {
             const nick = el.textContent.trim();
             let hasAddon = false;
             for (const activeNick of lastActiveNicks) {
-                if (activeNick.toLowerCase().trim() === nick.toLowerCase().trim() ||
-                    activeNick.toLowerCase().startsWith(nick.toLowerCase().split(' ')[0])) {
+                if (normalizeNick(activeNick) === normalizeNick(nick)) {
                     hasAddon = true;
                     break;
                 }
@@ -76,12 +83,12 @@
             }
         });
 
+        // Panel Gargonem
         document.querySelectorAll('.gargonem-otherlist-left.nowrap.ellipsis').forEach(el => {
             const nick = el.textContent.trim();
             let hasAddon = false;
             for (const activeNick of lastActiveNicks) {
-                if (activeNick.toLowerCase().trim() === nick.toLowerCase().trim() ||
-                    activeNick.toLowerCase().startsWith(nick.toLowerCase().split(' ')[0])) {
+                if (normalizeNick(activeNick) === normalizeNick(nick)) {
                     hasAddon = true;
                     break;
                 }
