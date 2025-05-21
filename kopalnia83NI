@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Margonem Kopalnia NI
 // @namespace    http://tampermonkey.net/
-// @version      5.9
+// @version      6.0
 // @description  Flaga UA w panelu "Kto jest tutaj" + logger heroików, legend i unikatów na Discord
 // @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @exclude      https://margonem.pl/
-// @updateURL    
-// @downloadURL  
+// @updateURL    https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia83NI
+// @downloadURL  https://raw.githubusercontent.com/Oskirrix/Kopalnia83/refs/heads/main/kopalnia83NI
 // @grant        none
 // ==/UserScript==
 
