@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         Kopalnia 83
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      5.0
 // @description  Automatycznie ładuje dodatek Margonem z podanego URL
 // @match        https://*.margonem.pl/*
+// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSINI.user.js
+// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSINI.user.js
 // @grant        none
 // ==/UserScript==
 
