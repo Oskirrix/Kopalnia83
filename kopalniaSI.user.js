@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Kopalnia 83
+// @name         Margonem Kopalnia 83
 // @namespace    http://tampermonkey.net/
-// @version      5.0
-// @description  Automatycznie ładuje dodatek Margonem z podanego URL
+// @version      6.0
+// @author       Kuchar
 // @match        https://*.margonem.pl/*
 // @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSI.user.js
 // @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSI.user.js
