@@ -4,8 +4,8 @@
 // @version      5.0
 // @description  Automatycznie ładuje dodatek Margonem z podanego URL
 // @match        https://*.margonem.pl/*
-// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSINI.user.js
-// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSINI.user.js
+// @updateURL    https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSI.user.js
+// @downloadURL  https://github.com/Oskirrix/Kopalnia83/raw/refs/heads/main/kopalniaSI.user.js
 // @grant        none
 // ==/UserScript==
 
